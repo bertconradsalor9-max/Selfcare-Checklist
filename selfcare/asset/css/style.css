@@ -1,0 +1,210 @@
+/* style.css - simple modern responsive */
+:root {
+  --accent: #4f46e5;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  color: #111;
+  font-size: 16px; /* Increased for readability */
+  line-height: 1.5; /* Added for better paragraph flow */
+  text-align: left; /* Explicit left alignment for consistency */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  background: var(--card);
+  border-bottom: 1px solid #e6e9ef;
+}
+
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.topbar nav a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  padding: 20px; /* Increased slightly for better spacing */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  margin-bottom: 16px;
+  text-align: left; /* Ensure content inside is left-aligned */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  body {
+    font-size: 14px; /* Smaller on mobile for readability */
+  }
+  .card {
+    padding: 16px; /* Adjust padding for mobile */
+  }
+}
+
+h1, h3 {
+  margin-top: 0;
+  text-align: left; /* Consistent left alignment */
+  margin-bottom: 12px; /* Added for spacing */
+}
+
+p {
+  text-align: left; /* Explicit for paragraphs */
+}
+
+.form-row {
+  margin-bottom: 12px;
+  margin-top: 8px; /* Added top margin for even spacing between rows */
+}
+
+label {
+  display: block;
+  font-size: 15px; /* Slightly larger for readability */
+  color: var(--muted);
+  margin-bottom: 6px;
+  text-align: left; /* Consistent */
+}
+
+input[type="text"], input[type="password"], input[type="time"], input[type="number"], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e9ef;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 16px; /* Match body for consistency */
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px; /* add spacing above buttons */
+}
+
+
+.button.secondary {
+  background: #6b7280;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  word-wrap: break-word; /* Prevent text overflow in cells */
+}
+
+.table th, .table td {
+  padding: 10px; /* Increased for better spacing */
+  border-bottom: 1px solid #f1f1f1;
+  text-align: left; /* Consistent left alignment */
+  font-size: 14px; /* Match buttons */
+}
+
+.actions a {
+  margin-right: 8px;
+  text-decoration: none;
+  display: inline-block; /* Better alignment in table cells */
+}
+
+.small {
+  font-size: 14px; /* Slightly larger for accessibility */
+  color: var(--muted);
+  text-align: left; /* Consistent */
+}
+
+.progress > i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+
+
+.progress > i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+}
+
+.notice {
+  padding: 10px;
+  border-radius: 6px;
+  background: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffecb5;
+  text-align: left; /* Consistent */
+}
+
+.footer {
+  padding: 14px 0;
+  text-align: center; /* Kept centered as it's footer-specific */
+  color: var(--muted);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  gap: 8px; /* space between logo and text */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 80px; /* or desired size */
+  height: auto;
+  display: block;
+}
+
+
